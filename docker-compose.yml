@@ -26,6 +26,18 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+  scoring-data-generator-client:
+    build: ./scoring-data-generator-client
+    ports:
+      - "80:80"
+    depends_on:
+      - broker
+  scoring-data-generator-server:
+    build: ./scoring-data-generator-server
+    ports:
+      - "8090:8090"
+    depends_on:
+      - broker
   kafka-ui:
     image: provectuslabs/kafka-ui
     container_name: kafka-ui
