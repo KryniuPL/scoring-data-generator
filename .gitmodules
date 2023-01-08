@@ -1,0 +1,6 @@
+[submodule "scoring-data-generator-server"]
+	path = scoring-data-generator-server
+	url = https://github.com/KryniuPL/scoring-data-generator-server
+[submodule "scoring-data-generator-client"]
+	path = scoring-data-generator-client
+	url = https://github.com/KryniuPL/scoring-data-generator-client
